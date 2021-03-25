@@ -1,0 +1,364 @@
+/* Vicky Yang */
+
+
+
+
+/* BASICS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F0E4E4;
+  color: black;
+  font-family:'Gochi Hand', cursive;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  min-height: calc(100vh - 10vh);
+  width: 100vw;
+  padding: 1em 0.5em 0 0.5em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.home {
+  background-color: #F0E4E4;
+}
+
+.about {
+  background-color: #787878;
+}
+
+.works {
+  background-color: #E34848;
+}
+
+
+
+
+
+/* NAVIGATION */
+
+nav {
+  text-align: center;
+  font-size: 2em;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  line-height: 1;
+  margin: 0.5em 1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #D8B22D;
+}
+
+nav .active {
+  color: #D8B22D;
+}
+
+.about nav .active {
+  color: #8AB95B;
+}
+
+.works nav .active {
+  color: #72EEFF;
+}
+
+
+
+
+/* TYPOGRAPHY */
+
+h1 {
+
+}
+
+h2{
+  font-size: 5em;
+  font-weight: 700;
+  margin: 1em 0;
+  line-height: 0.95em;
+  text-align: center;
+  color: #62979E;
+}
+
+h3{
+  font-size: 2em;
+  line-height: 0.95em;
+  font-weight: 800;
+  margin: 0 0 1em 0;
+  color: #FFFFFF;
+}
+
+p {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+
+
+
+/* BUTTON */
+
+.button{
+ background-color: #B0D6C4;
+ color: white;
+ border-radius: 2.5em;
+ padding: 0.5em 1em;
+ transition: all 0.3s;
+ display: inline-block;
+ text-decoration: none;
+ transition: all 0.3s;
+}
+
+.button:hover{
+  text-decoration: none;
+  background-color: #B0C6D6;
+  color: black;
+}
+
+
+/* SOCIAL MEDIA LINKS */
+
+.social-links {
+  position: absolute;
+  bottom: 0.5em;
+  right: 5em;
+}
+
+.social {
+  display: inline-block;
+  margin: 0.25em;
+  text-decoration: none;
+  opacity: 1;
+  width: 3em;
+  transition: opacity 0.3s;
+}
+
+.social:hover {
+  opacity: 0.5;
+}
+
+
+
+
+
+/* HOME */
+
+.home-text {
+  text-align: center;
+}
+
+.home-character {
+  position: relative;
+}
+
+.home-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.home-face {
+  max-width: 50vw;
+}
+
+.home-character {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-bubble {
+  background-image: url(img/bubble.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 3em;
+  display: inline-block;
+  max-width: 14em;
+  text-align: center;
+  font-size: 3.5vw;
+  color: #42A2E8;
+  margin-left: 45vw;
+  margin-bottom: -2em;
+  margin-top: 3em;
+}
+
+
+
+
+
+
+/* ABOUT */
+
+.about-text {
+  background-color: #C4C4C4;
+  padding: 0.25em 0.5em;
+  border-radius: 1em;
+  text-align: center;
+  display: block;
+  max-width: 50rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 2em;
+}
+
+.about-character {
+  position: absolute;
+  bottom: 0;
+  right: 5vw;
+}
+
+.about-stars { 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 33vw;
+  z-index: -1;
+
+}
+
+.about-dots {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  max-width: 33vw
+}
+
+
+
+
+
+/* WORKS */
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5em;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.works-footer-shapes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  max-width: 33vw;
+}
+
+.works-character {
+  position: relative;
+  left: -1em;
+  bottom: -1em;
+  max-width: 50vw;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 800px) {
+
+  .home-bubble {
+    max-width: 14em;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .home-face {
+    max-width: 50vw;
+    position: relative;
+    top: 5em;
+  }
+
+  .home-character {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .works-grid {
+    grid-template-columns: auto auto;
+  }
+
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+
+  .home-bubble {
+    font-size: 2.25vw;
+  }
+
+  .works-grid {
+    max-width: 40em;
+    margin-right: auto;
+    margin-left: 50vw;
+    padding-bottom: 10em;
+  }
+
+  .works-footer-shapes {
+    position: fixed;
+  }
+  
+  .works-character {
+    position: fixed;
+  }
+
+  .about-text {
+    font-size: 3em;
+  }
+
+}
